@@ -1,5 +1,5 @@
 
-# SeeSignage Serverless utils
+# Serverless utils
 
 ## Installation
 ```sh

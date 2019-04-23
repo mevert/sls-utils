@@ -19,6 +19,4 @@ const log = (level: string, message: string) => {
   }
 }
 
-export {
-  log
-}
+export default log
