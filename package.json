@@ -1,6 +1,6 @@
 {
   "name": "seesignage-sls-utils",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "pricate": false,
   "main": "build/index.js",
@@ -21,6 +21,7 @@
   "author": "mevert",
   "license": "MIT",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.25",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.13.6",
     "jest": "^23.6.0",
