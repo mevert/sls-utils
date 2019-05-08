@@ -1,4 +1,8 @@
 export { default as success } from './response/success'
 export { default as failure } from './response/failure'
 export { default as log } from './log'
-export { getUserSubFromEvent } from './request/event'
+export {
+  getUserSubFromEvent,
+  getBodyAsJSON,
+  getPathParameter
+} from './request/event'
