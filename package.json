@@ -2,7 +2,7 @@
   "name": "seesignage-sls-utils",
   "version": "0.4.0",
   "description": "",
-  "pricate": false,
+  "private": false,
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
