@@ -7,3 +7,6 @@ export {
   getBodyAsJSON,
   getPathParameter
 } from './request/event'
+export {
+  createUpdateExpressions
+} from './db/updateExpressions'
