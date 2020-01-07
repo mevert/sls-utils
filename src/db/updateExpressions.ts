@@ -1,3 +1,4 @@
+import { UpdateExpressions } from '../types'
 
 /**
  * Create update expressions for DynamoDB update function parameters.
@@ -5,13 +6,13 @@
  * modifying them.
  * @param item
  */
-const createUpdateExpressions = (item: any) => {
+const createUpdateExpressions = (item: any): UpdateExpressions => {
   const properties = Object.keys(item)
   const ExpressionAttributeValues = 'ExpressionAttributeValues'
   const ExpressionAttributeNames = 'ExpressionAttributeNames'
   const UpdateExpressionArray: string[] = []
   const updateExpressions = properties.reduce(
-    (expressions: any, property: any): any => {
+    (expressions: any, property: string): any => {
       const value = item[property]
 
       UpdateExpressionArray.push(`#${property} = :${property}`)
