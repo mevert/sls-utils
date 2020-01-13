@@ -4,8 +4,8 @@
 const createEmailRequest = (
   senderEmail: string,
   destinationEmails: string[],
-  message: string,
-  subject: string
+  subject: string,
+  message: string
 ) => ({
   Destination: {
     ToAddresses: destinationEmails

@@ -9,8 +9,8 @@ describe('Emails', () => {
     const emailRequest = createEmailRequest(
       sender,
       destinationEmails,
-      message,
-      subject
+      subject,
+      message
     )
     const expected = {
       Destination: {
