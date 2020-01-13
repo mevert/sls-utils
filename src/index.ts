@@ -10,3 +10,6 @@ export {
 export {
   createUpdateExpressions
 } from './db/updateExpressions'
+export {
+  createEmailRequest
+} from './ses/emails'
