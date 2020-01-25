@@ -1,6 +1,6 @@
 {
   "name": "seesignage-sls-utils",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "",
   "private": false,
   "main": "build/index.js",
