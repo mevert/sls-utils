@@ -4,7 +4,7 @@ import { CreateEventMock } from '../types'
 /**
  * Use this function for example when executing lambda functions in tests
  */
-const executeLambda = (handler: any, event: any, context: any) =>
+const executeLambda = (handler: any, event: any, context: any): any =>
   new Promise((resolve, reject) => {
     handler(event, context, (err: any, response: any) => {
       if (err !== null) {
