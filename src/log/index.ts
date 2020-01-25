@@ -1,4 +1,4 @@
-/* tslint:disable:no-console */
+/* eslint-disable no-console */
 
 const log = (level: string, message: string) => {
   if (process.env.LOGGING === 'true') {

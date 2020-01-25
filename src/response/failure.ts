@@ -5,9 +5,7 @@ const failure = ({ statusCode, message, name }: HTTPFailure) => {
   if (name === 'ValidationError') {
     return buildResponse(400, { message })
   }
-  return statusCode
-    ? buildResponse(statusCode, { message })
-    : buildResponse(500, { message })
+  return statusCode ? buildResponse(statusCode, { message }) : buildResponse(500, { message })
 }
 
 export default failure

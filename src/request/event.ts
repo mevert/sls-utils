@@ -22,8 +22,4 @@ const getPathParameter = (event: AWSLambda.APIGatewayEvent, parameter: string) =
   throw new createError.BadRequest(`Invalid path parameter ${parameter}`)
 }
 
-export {
-  getUserSubFromEvent,
-  getBodyAsJSON,
-  getPathParameter
-}
+export { getUserSubFromEvent, getBodyAsJSON, getPathParameter }

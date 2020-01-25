@@ -11,23 +11,20 @@ const createUpdateExpressions = (item: any): UpdateExpressions => {
   const ExpressionAttributeValues = 'ExpressionAttributeValues'
   const ExpressionAttributeNames = 'ExpressionAttributeNames'
   const UpdateExpressionArray: string[] = []
-  const updateExpressions = properties.reduce(
-    (expressions: any, property: string): any => {
-      const value = item[property]
+  const updateExpressions = properties.reduce((expressions: any, property: string): any => {
+    const value = item[property]
 
-      UpdateExpressionArray.push(`#${property} = :${property}`)
-      expressions[ExpressionAttributeValues] = {
-        ...expressions[ExpressionAttributeValues],
-        [`:${property}`]: value
-      }
-      expressions[ExpressionAttributeNames] = {
-        ...expressions[ExpressionAttributeNames],
-        [`#${property}`]: property
-      }
-      return expressions
-  },
-    {}
-  )
+    UpdateExpressionArray.push(`#${property} = :${property}`)
+    expressions[ExpressionAttributeValues] = {
+      ...expressions[ExpressionAttributeValues],
+      [`:${property}`]: value
+    }
+    expressions[ExpressionAttributeNames] = {
+      ...expressions[ExpressionAttributeNames],
+      [`#${property}`]: property
+    }
+    return expressions
+  }, {})
 
   const UpdateExpression = `SET ${UpdateExpressionArray.join(', ')}`
   return {
@@ -36,6 +33,4 @@ const createUpdateExpressions = (item: any): UpdateExpressions => {
   }
 }
 
-export {
-  createUpdateExpressions
-}
+export { createUpdateExpressions }

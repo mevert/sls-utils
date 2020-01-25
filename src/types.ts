@@ -1,15 +1,14 @@
-
-interface IJSON {
+export interface JsonBody {
   [key: string]: any
 }
 
-interface HTTPFailure {
+export interface HTTPFailure {
   statusCode?: number
   message: string
   name?: string
 }
 
-interface UpdateExpressions {
+export interface UpdateExpressions {
   UpdateExpression: string
   ExpressionAttributeValues: ExpressionAttributeValuesInterface
   ExpressionAttributeNames: ExpressionAttributeNamesInterface
@@ -18,18 +17,22 @@ interface UpdateExpressions {
 /**
  * Map containing values of properties e.g { ':name': name } where name is the value.
  */
-interface ExpressionAttributeValuesInterface {
+export interface ExpressionAttributeValuesInterface {
   [key: string]: any
 }
 /**
  * Mappings of attribute names. e.g { '#name': 'name' }
  */
-interface ExpressionAttributeNamesInterface {
- [key: string]: string
+export interface ExpressionAttributeNamesInterface {
+  [key: string]: string
 }
 
-export {
-  IJSON,
-  HTTPFailure,
-  UpdateExpressions
+export interface PathParameters {
+  [key: string]: string
+}
+
+export interface CreateEventMock {
+  pathParameters?: PathParameters
+  body?: JsonBody
+  sub?: string
 }

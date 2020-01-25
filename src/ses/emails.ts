@@ -25,6 +25,4 @@ const createEmailRequest = (
   Source: senderEmail
 })
 
-export {
-  createEmailRequest
-}
+export { createEmailRequest }

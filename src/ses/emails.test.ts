@@ -6,12 +6,7 @@ describe('Emails', () => {
     const destinationEmails = ['asdf@asdf.com']
     const message = 'this is email content'
     const subject = 'test@test123.fi'
-    const emailRequest = createEmailRequest(
-      sender,
-      destinationEmails,
-      subject,
-      message
-    )
+    const emailRequest = createEmailRequest(sender, destinationEmails, subject, message)
     const expected = {
       Destination: {
         ToAddresses: destinationEmails
