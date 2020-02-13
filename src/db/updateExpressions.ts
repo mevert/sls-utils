@@ -13,15 +13,16 @@ const createUpdateExpressions = (item: any): UpdateExpressions => {
   const UpdateExpressionArray: string[] = []
   const updateExpressions = properties.reduce((expressions: any, property: string): any => {
     const value = item[property]
-
-    UpdateExpressionArray.push(`#${property} = :${property}`)
-    expressions[ExpressionAttributeValues] = {
-      ...expressions[ExpressionAttributeValues],
-      [`:${property}`]: value
-    }
-    expressions[ExpressionAttributeNames] = {
-      ...expressions[ExpressionAttributeNames],
-      [`#${property}`]: property
+    if (value !== undefined) {
+      UpdateExpressionArray.push(`#${property} = :${property}`)
+      expressions[ExpressionAttributeValues] = {
+        ...expressions[ExpressionAttributeValues],
+        [`:${property}`]: value
+      }
+      expressions[ExpressionAttributeNames] = {
+        ...expressions[ExpressionAttributeNames],
+        [`#${property}`]: property
+      }
     }
     return expressions
   }, {})

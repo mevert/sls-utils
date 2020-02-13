@@ -21,8 +21,8 @@
   "author": "mevert",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^23.6.0",
-    "ts-jest": "^24.1.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
     "typescript": "^3.6.3",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
