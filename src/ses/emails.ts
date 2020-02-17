@@ -25,4 +25,30 @@ const createEmailRequest = (
   Source: senderEmail
 })
 
-export { createEmailRequest }
+/**
+ * Generate SES send email request with HTML message
+ */
+const createHtmlEmailRequest = (
+  senderEmail: string,
+  destinationEmails: string[],
+  subject: string,
+  htmlMessage: string
+) => ({
+  Destination: {
+    ToAddresses: destinationEmails
+  },
+  Message: {
+    Body: {
+      Html: {
+        Data: htmlMessage
+      }
+    },
+    Subject: {
+      Data: subject,
+      Charset: 'UTF-8'
+    }
+  },
+  Source: senderEmail
+})
+
+export { createEmailRequest, createHtmlEmailRequest }
