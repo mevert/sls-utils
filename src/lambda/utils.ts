@@ -23,8 +23,9 @@ const createEventMock = ({ pathParameters, body, sub }: CreateEventMock) => ({
   requestContext: {
     identity: {
       cognitoIdentityId: 'f15c643d-a598-4ad4-97f0-b59b8fa195a0',
-      cognitoAuthenticationProvider: `cognito-idp.eu-central-1.amazonaws.com/eu-central-1_RtCwnIlGR,cognito-idp.eu-central-1.amazonaws.com/eu-central-1_RtCwnIlGR:CognitoSignIn:${sub ||
-        'df791fcc-24b7-4f69-be47-e82a3d183520'}`
+      cognitoAuthenticationProvider: `cognito-idp.eu-central-1.amazonaws.com/eu-central-1_RtCwnIlGR,cognito-idp.eu-central-1.amazonaws.com/eu-central-1_RtCwnIlGR:CognitoSignIn:${
+        sub || 'df791fcc-24b7-4f69-be47-e82a3d183520'
+      }`
     }
   }
 })
