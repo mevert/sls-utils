@@ -29,7 +29,11 @@ const getBodyAsJSON = (event: AWSLambda.APIGatewayEvent) => {
  */
 const getPathParameter = (event: AWSLambda.APIGatewayEvent, parameter: string) => {
   if (event.pathParameters) {
-    return event.pathParameters[parameter]
+    const value = event.pathParameters[parameter]
+    if (value === undefined) {
+      throw new createError.BadRequest(`${parameter} is undefined`)
+    }
+    return value
   }
   throw new createError.BadRequest(`Invalid path parameter ${parameter}`)
 }
