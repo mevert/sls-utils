@@ -1,4 +1,5 @@
 export { default as success } from './response/success'
+export { default as accepted } from './response/accepted'
 export { default as failure } from './response/failure'
 export { default as customFailure } from './response/customFailure'
 export { default as log } from './log'
